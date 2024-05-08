@@ -1,0 +1,25 @@
+div, h1 {
+    text-align: center;
+    margin: 0;
+}
+h1 {
+    display: block;
+    font-size: 200px;
+}
+div > button {
+    font-size: 16px;
+    padding: 10px 15px;
+    color: #fff;
+    border: transparent;
+    border-radius: 5px;
+    margin: 10px;
+}
+#dec-btn {
+    background-color: rgb(204, 204, 6);
+}
+#res-btn {
+    background-color: red;
+}
+#inc-btn {
+    background-color: blue;
+}
