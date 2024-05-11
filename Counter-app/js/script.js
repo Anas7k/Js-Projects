@@ -6,11 +6,11 @@ let inc = document.getElementById('inc-btn')
 
 
 dec.addEventListener('click', function() {
-    // counter--;
+    counter--;
     // if (counter > 0) {
     //     counter--;
     // }
-    counter = counter > 0 ? --counter : counter
+    // counter = counter > 0 ? --counter : counter
     document.getElementById('countLabel').textContent = counter
 })
 
