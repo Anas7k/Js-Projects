@@ -4,7 +4,7 @@ div, h1 {
 }
 h1 {
     display: block;
-    font-size: 20px;
+    font-size: 200px;
 }
 div > button {
     font-size: 16px;
