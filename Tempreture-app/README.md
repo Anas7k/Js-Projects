@@ -28,5 +28,5 @@ This project is a web-based temperature converter that not only provides accurat
 ## Screenshot
 Here is a screenshot of my project:
 
-![screenshot](Tempreture-app/screenshot.png)
+![screenshot](screenshot.png)
 
