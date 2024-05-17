@@ -26,7 +26,7 @@ This project is a web-based temperature converter that not only provides accurat
 4. The converted temperature will be displayed in the "Converted Degree" section.
 
 ## Screenshot
-Here is a screenshot of my project:
+Here is a screenshot of my project
 
 ![screenshot](screenshot.png)
 
