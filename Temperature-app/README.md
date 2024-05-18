@@ -23,7 +23,7 @@ This project is a web-based temperature converter that not only provides accurat
 1. Enter a temperature value in the input field labeled "Degree".
 2.  Select the unit of the entered temperature (Celsius, Fahrenheit, or Kelvin) from the dropdown menu.
 3. Select the desired unit to convert to from the second dropdown menu labeled "Convert to".
-4. The converted temperature will be displayed in the "Converted Degree" section.
+4. The converted temperature will be displayed in the "Converted Degree" section
 
 ## Screenshot
 Here is a screenshot of my project:
