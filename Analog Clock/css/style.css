@@ -1,0 +1,254 @@
+/*==================== TABLE OF CONTENTS ====================*/
+
+/* 
+1. Global Styles
+2. Clock Styles
+3. Button Styles
+4. Theme Styles
+*/
+
+/*==================== 1. GLOBAL STYLES ====================*/
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--background-color);
+} 
+
+/*==================== 2. CLOCK STYLES ====================*/
+
+/* Main clock container */
+.clock {
+    position: relative;
+    top: 150px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/* Clock face */
+.clock::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background: var(--clock-bg);
+    border: 10px solid #313131;
+    box-shadow: var(--bx-shdw);
+}
+
+/* Minute lines and hour numbers container */
+.minute-lines,
+.num-hours {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Hour numbers */
+.num-hours span {
+    transform: rotate(calc(30deg * var(--n)));
+    position: absolute;
+    text-align: center;
+    inset: 5px;
+}
+
+.num-hours span b {
+    transform: rotate(calc(-30deg * var(--n)));
+    font-size: 35px;
+    display: inline-block;
+    font-weight: normal;
+    color: var(--num-color, black);
+}
+
+/* Minute lines */
+.minute-lines span {
+    position: absolute;
+    transform: rotate(calc(var(--n) * 6deg));
+    inset: -20px;
+    text-align: center;
+}
+
+.minute-lines span p {
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background-color: var(--minute-line-color, #000);
+    border-radius: 2px;
+}
+
+/* Larger lines for every 5th minute */
+.minute-lines span:nth-child(5n) p {
+    width: 4px;
+    height: 24px;
+    transform: translateY(1px);
+}
+
+/* Hands container */
+.hands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center dot */
+.hands:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--center-dot-color, #000);
+    box-shadow: 0 0 10px hsl(240, 10%, 16%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Hand styles */
+.hour-hand,
+.minute-hand,
+.second-hand {
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.hour-hand::before,
+.minute-hand::before,
+.second-hand::before {
+    content: '';
+    transform-origin: bottom;
+    border-radius: 50%;
+    background-color: var(--hand-color, #000);
+}
+
+/* Hour hand */
+.hour-hand {
+    width: 150px;
+    height: 150px;
+}
+
+.hour-hand::before {
+    width: 6px;
+    height: 80px;
+}
+
+/* Minute hand */
+.minute-hand {
+    width: 250px;
+    height: 250px;
+}
+
+.minute-hand::before {
+    width: 6px;
+    height: 130px;
+}
+
+/* Second hand */
+.second-hand {
+    width: 280px;
+    height: 265px;
+}
+
+.second-hand::before {
+    width: 3px;
+    height: 160px;
+}
+
+/*==================== 3. BUTTON STYLES ====================*/
+
+/* Button container */
+.btns {
+    margin: auto;
+    position: relative;
+    top: 300px;
+    left: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+/* General button styles */
+.btns * {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* Selected button scale effect */
+.selected {
+    transform: scale(1.3);
+    transition: 0.3s ease;
+}
+
+/* Theme buttons */
+#dark-theme-toggle{ background-color: #000; }
+#white-theme-toggle { background-color: #fff; }
+#green-theme-toggle { background-color: #008b8b; }
+#red-theme-toggle { background-color: #c54141; }
+#blue-theme-toggle { background-color: #0051ffba; }
+#yellow-theme-toggle { background-color: #ffe000; }
+
+/*==================== 4. THEME VARIABLES ====================*/
+
+/* Root (default or green) theme */
+:root {
+    --background-color: #008b8b;
+    --clock-bg: radial-gradient(circle, #5fefe7, #459591);
+    --bx-shdw: inset 0 0 30px #000, 0 0 30px #413f3f, inset 0 0 0 4px #000;
+}
+
+/* Dark theme */
+.dark-theme {
+    --background-color: #000;
+    --clock-bg: #000;
+    --minute-line-color: #fff;
+    --hand-color: #fff;
+    --num-color: #fff;
+    --center-dot-color: #fff;
+    --dark-btn-shdw: 0 0 20px #fff;
+}
+
+/* White theme */
+.white-theme {
+    --background-color: #fff;
+    --clock-bg: #fff;
+}
+
+/* Red theme */
+.red-theme {
+    --background-color: #c54141;
+    --clock-bg: radial-gradient(circle, #f38a8a, #ec3d3d);
+    --bx-shdw: inset 0 0 30px #000, 0 0 10px #000, inset 0 0 0 4px #000;   
+}
+
+/* Blue theme */
+.blue-theme {
+    --background-color:#0051ff83;
+    --clock-bg: radial-gradient(circle, #81adf3, #054ef88d);
+    --bx-shdw: inset 0 0 30px #000, 0 0 10px #000, inset 0 0 0 4px #000;
+}
+
+/* Yellow theme */
+.yellow-theme {
+    --background-color: #ffe000;
+    --clock-bg: radial-gradient(circle, #eada61, #e7db02);
+    --bx-shdw: inset 0 0 30px #000, 0 0 10px #000, inset 0 0 0 4px #000;
+}
