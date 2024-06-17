@@ -123,6 +123,7 @@ button:hover {
         grid-template-columns: 1fr;
         box-shadow: 0 0 0;
         padding-top: 18px;
+        padding-bottom: 20px;
         border-radius: 0;
     }
 
@@ -133,14 +134,13 @@ button:hover {
     .left {
         grid-row: 2/3;
         position: absolute;
-        bottom: 60px;
+        bottom: 80px;
         width: 85%;
     }
 
     .right {
         grid-row: 1/2;
         margin: -20px -50px -31px -50px;
-        z-index: 1;
         height: 40%;
         border-radius: 0;
         box-shadow: 0 0 10px hsl(166, 100%, 36%);
