@@ -24,10 +24,10 @@ This project showcases a classic analog clock design that not only tells time ac
 2. To change the clock's theme, click on the theme buttons located below the clock. Each theme button corresponds to a different color theme.
 3. Enjoy the smooth movement of the clock's hands as they indicate the current time.
 
-## Screenshots
-Here is a screenshot of the analog clock:
+## Video
+Here is a video of the analog clock:
 
-![Analog Clock](screenshot.png)
+https://github.com/Anas7k/Js-Projects/assets/117765449/e5fbdb1b-1fb3-4c89-b34c-8eaef5d6d95b
 
 ## License
 
