@@ -25,7 +25,7 @@ This project showcases a classic analog clock design that not only tells time ac
 3. Enjoy the smooth movement of the clock's hands as they indicate the current time.
 
 ## Video
-Here is a video of the analog clock:
+Here is a vi of the analog clock:
 
 https://github.com/Anas7k/Js-Projects/assets/117765449/e5fbdb1b-1fb3-4c89-b34c-8eaef5d6d95b
 
