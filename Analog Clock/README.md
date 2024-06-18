@@ -20,14 +20,20 @@ This project showcases a classic analog clock design that not only tells time ac
 - **JavaScript:** Used for implementing the clock's functionality, including updating the time and handling user interactions.
 
 ## Usage
+
 1. The clock will automatically display the current time when the page loads.
 2. To change the clock's theme, click on the theme buttons located below the clock. Each theme button corresponds to a different color theme.
 3. Enjoy the smooth movement of the clock's hands as they indicate the current time.
 
 ## Video
-Here is a video of the analog clock:
 
-https://github.com/Anas7k/Js-Projects/assets/117765449/e5fbdb1b-1fb3-4c89-b34c-8eaef5d6d95b
+Watch a video demonstration of the analog clock in action:
+
+[![Analog Clock Video](https://github.com/Anas7k/Js-Projects/assets/117765449/e5fbdb1b-1fb3-4c89-b34c-8eaef5d6d95b)](https://github.com/Anas7k/Js-Projects/assets/117765449/e5fbdb1b-1fb3-4c89-b34c-8eaef5d6d95b)
+
+## Demo
+
+Check out the live demo of the [Analog Clock](https://anas7k.github.io/Js-Projects/Analog%20Clock/).
 
 ## License
 
