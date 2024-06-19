@@ -16,7 +16,7 @@ This project showcases a classic analog clock design that not only tells time ac
 ## Technologies Used
 
 - **HTML5:** Used for the structure and layout of the clock.
-- **CSS3:** Used for styling the clock's elements and animations.
+- **CSS3:** Used for styling the clock's elements and the color themes.
 - **JavaScript:** Used for implementing the clock's functionality, including updating the time and handling user interactions.
 
 ## Usage
