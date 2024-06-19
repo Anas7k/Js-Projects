@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
 body {
     background-color: #00092f;
 }
@@ -12,7 +16,7 @@ body {
 .digital-clock, .today {
     width: 250px;
     height: 80px;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
     display: flex;
     justify-content: center;
@@ -38,7 +42,7 @@ body {
 .pr, .rd, .tri, .bl {
     width: 70px;
     height: 70px;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
     border-radius: 10px;
     z-index: -1;
@@ -160,10 +164,10 @@ body {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     body {
-        max-width: 1200px;
-        margin: auto
+        max-width: 1400px;
+        margin: auto;
     }
     #clock, #date {
         font-size: 50px;
