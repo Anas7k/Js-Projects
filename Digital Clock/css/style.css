@@ -161,6 +161,10 @@ body {
 }
 
 @media screen and (min-width: 900px) {
+    body {
+        max-width: 1200px;
+        margin: auto
+    }
     #clock, #date {
         font-size: 50px;
     }
@@ -172,20 +176,20 @@ body {
         border-radius: 10px;
     }
     .bl::before {
-        bottom: -400px;
+        bottom: -200px;
         right: 400px;
         background-color: rgb(179, 255, 0);
         box-shadow: 0 0 40px rgb(179, 255, 0);
     }
     .pr::before {
-        bottom: -700px;
+        bottom: -450px;
         left: 800px;
         background-color: #ffebcd;
         box-shadow: 0 0 40px #ffebcd;
     }
     .rd::before {
-        bottom: -550px;
-        right: 600px;
+        bottom: -350px;
+        right: 700px;
         background-color: #ff005e;
         box-shadow: 0 0 40px #ff005e;
     }
