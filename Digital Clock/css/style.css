@@ -1,0 +1,199 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #00092f;
+}
+
+/* Digital Clock and Date Styles */
+.digital-clock, .today {
+    width: 250px;
+    height: 80px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(250, 240, 255, 0.034);
+    top: 190px;
+}
+.today {
+    top: 400px;
+}
+#clock, #date {
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-shadow: 0 0 1px #fff;
+}
+
+/* Shape Styles */
+.pr, .rd, .tri, .bl {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    position: relative;
+    border-radius: 10px;
+    z-index: -1;
+}
+.pr::after, .rd::after, .tri::after, .bl::after {
+    content: '';
+    position: absolute;
+    margin: auto;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    z-index: -1;
+}
+
+/* Primary Shape Styles */
+.pr {
+    background-color: blueviolet;
+    top: -10px;
+    right: 130px;
+    box-shadow: 0 0 40px blueviolet;
+}
+.pr::after {
+    background-color: rgb(226, 43, 168);
+    top: 290px;
+    rotate: 15deg;
+    box-shadow: 0 0 40px rgb(226, 43, 168);
+}
+
+/* Red Shape Styles */
+.rd {
+    background-color: rgb(226, 43, 49);
+    top: 0px;
+    left: 120px;
+    box-shadow: 0 0 40px rgb(226, 43, 49);
+}
+.rd::after {
+    background-color: rgb(64, 226, 43);
+    top: 290px;
+    left: 10px;
+    transform: rotate(20deg);
+    box-shadow: 0 0 40px rgb(64, 226, 43);
+}
+
+/* Triangle Shape Styles */
+.tri, .tri::after {
+    top: -170px;
+    left: 70px;
+    transform: rotate(36deg);
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 75px solid rgb(0, 255, 213);
+    border-radius: 0;
+}
+.tri::after {
+    top: 250px;
+    left: 120px;
+    border-bottom: 75px solid rgb(255, 238, 0);
+}
+
+/* Blue Shape Styles */
+.bl {
+    background-color: rgb(0, 0, 255);
+    top: -110px;
+    right: 50px;
+    transform: rotate(30deg);
+    box-shadow: 0 0 40px rgb(0, 0, 255);
+}
+.bl::after {
+    top: 250px;
+    right: -150px;
+    background-color: rgb(255, 128, 0);
+    box-shadow: 0 0 40px rgb(255, 128, 0);
+}
+
+/* Media Queries */
+@media screen and (min-width: 700px) {
+    .digital-clock, .today {
+        width: 400px;
+        height: 100px;
+    }
+    #clock, #date {
+        font-size: 40px;
+    }
+    .pr, .rd, .tri, .bl, .pr::after, .rd::after, .tri::after, .bl::after {
+        width: 100px;
+        height: 100px;
+    }
+    .pr {
+        top: -70px;
+        right: 200px;
+    }
+    .rd {
+        top: -50px;
+        left: 200px;
+    }
+    .bl {
+        top: -230px;
+        right: 100px;
+    }
+    .bl::after {
+        top: 270px;
+        right: -160px;
+    }
+    .tri, .tri::after {
+        width: 0;
+        height: 0;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+        border-bottom: 100px solid rgb(0, 255, 213);
+    }
+    .tri {
+        top: -300px;
+    }
+
+    .tri::after {
+        border-bottom: 100px solid rgb(255, 238, 0);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #clock, #date {
+        font-size: 50px;
+    }
+    .bl::before, .pr::before, .tri::before, .rd::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+    }
+    .bl::before {
+        bottom: -400px;
+        right: 400px;
+        background-color: rgb(179, 255, 0);
+        box-shadow: 0 0 40px rgb(179, 255, 0);
+    }
+    .pr::before {
+        bottom: -700px;
+        left: 800px;
+        background-color: #ffebcd;
+        box-shadow: 0 0 40px #ffebcd;
+    }
+    .rd::before {
+        bottom: -550px;
+        right: 600px;
+        background-color: #ff005e;
+        box-shadow: 0 0 40px #ff005e;
+    }
+    .tri::before {
+        bottom: 200px;
+        left: 400px;
+        border-radius: 50%;
+        background-color: rgb(0, 174, 255);
+        box-shadow: 0 0 40px rgb(0, 174, 255);
+    }
+}
