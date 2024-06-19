@@ -22,7 +22,7 @@ This project is a simple digital clock that displays the current time and date. 
 ## Usage
 
 1. The digital clock will automatically display the current time and date.
-3. The clock's layout is responsive, ensuring it looks great on all devices but some of the shapes will appeared in large screens only.
+3. The clock's layout is responsive, ensuring it looks great on all devices but some of the shapes will be appeared only in large screens.
 4. No further actions are needed to use the digital clock. Just sit back and watch the time update in real-time!
 
 ## Screenshot
