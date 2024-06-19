@@ -1,4 +1,3 @@
-
 function clock() {
     const now = new Date();
     let hours = now.getHours();
@@ -10,12 +9,13 @@ function clock() {
     hours = (hours % 12 || 12).toString().padStart(2, '0');
 
     // Get date components
-    const day = now.getDate()
+    const day = now.getDate().toString().padStart(2, '0');
     const month = now.getMonth()
     const year = now.getFullYear();
 
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const monthName = monthNames[month];
+    
     // Format the time string
     const time = `${hours}:${minutes}:${seconds} ${ampm}`;
     document.querySelector('#clock').textContent = time;
