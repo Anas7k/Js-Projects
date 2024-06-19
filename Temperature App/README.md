@@ -28,7 +28,7 @@ This project is a web-based temperature converter that not only provides accurat
 ## Screenshot
 Here is a screenshot of my project:
 
-![screenshot](screenshot.png)
+<img  alt="project-screenshot" src="https://github.com/Anas7k/Js-Projects/assets/117765449/0aa2b693-6638-4737-859e-8e35156b9cda">
 
 ## Demo
 
