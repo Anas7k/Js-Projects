@@ -9,9 +9,9 @@ This project is a simple digital clock that displays the current time and date. 
 ## Features
 
 - **Current Time Display:** Shows the current time in hours, minutes, and seconds.
--**Current Date Display:** Displays the current date.
+- **Current Date Display:** Displays the current date.
 - **Responsive Design:** Adjusts layout and sizes based on the screen width.
--**Visual Enhancements:** Includes shapes with shadows and background blur effects.
+- **Visual Enhancements:** Includes shapes with shadows and background blur effects.
 
 ## Technologies Used
 
