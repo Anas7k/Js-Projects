@@ -28,7 +28,7 @@ This project is a simple digital clock that displays the current time and date. 
 ## Screenshot
 Here is a screenshot of the Digital Clock:
 
-![screenshot](screenshot.png)
+<img width="1120" alt="project-screenshot" src="https://github.com/Anas7k/Js-Projects/assets/117765449/c8094b45-9aa8-4739-be6d-56dbff84638d">
 
 ## Demo
 
