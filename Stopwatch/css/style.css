@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(145deg, rgba(232, 87, 237, 0.15) 0%,rgba(109, 137, 69, 0.15) 100%),linear-gradient(75deg, rgb(33, 138, 184),rgb(0, 241, 181));
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.stopwatch {
+    position: relative;
+    top: -30px;
+    width: 330px;
+    height: 500px;
+    background-color: rgba(60, 61, 63, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(50px);
+}
+
+.display {
+    margin: 70px auto;
+    margin-top: 40px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 241, 181);
+    box-shadow: 0 0 10px rgb(0, 241, 181);
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.laps {
+    margin: 0 auto;
+    margin-top: -30px;
+    width: 90%;
+    height: 120px;
+    line-height: 1.5;
+}
+.laps div {
+    color: #fff;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.btns {
+    margin: 0 3%;
+    display: flex;
+    justify-content: center;
+}
+.btns button {
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 40px;
+    border: 2px solid rgb(0, 241, 181);
+    box-shadow: 0 0 3px rgb(0, 241, 181);
+    background: transparent;
+    color: #fff;
+    margin: auto;
+}
+.btns button:hover {
+    transform: scale(1.05);
+    transition: .3s ease;
+    box-shadow: 0 0 10px rgb(0, 241, 181);
+}
+
+@media screen and (min-width: 900px) {
+    .stopwatch {
+        width: 500px;
+        height: 700px;
+    }
+    .display {
+        width: 300px;
+        height: 300px;
+        font-size: 45px;
+        border: 8px solid rgb(0, 241, 181);
+        box-shadow: 0 0 15px rgb(0, 241, 181);
+    }
+
+    .btns button {
+        padding: 15px 35px;
+        font-size: 25px;
+        box-shadow: 0 0 6px rgb(0, 241, 181);
+    }
+    .laps {
+        height: 200px;
+        line-height: 1.6;
+    }
+    .laps div {
+        font-size: 30px;
+    }
+    .btns button {
+        border: 3px solid rgb(0, 241, 181);
+    }
+    .btns button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgb(0, 241, 181);
+    }
+}
