@@ -32,7 +32,7 @@ Here is a screenshot of my project:
 
 ## Demo
 
-Check out the live demo of the [Temperature Converter](https://anas7k.github.io/Js-Projects/Temperature%20App/).
+Check out the live demo of the [Temperature Converter](https://anas7k.github.io/Js-Projects/Temperature%20Converter/).
 
 ## License
 
