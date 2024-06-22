@@ -35,7 +35,7 @@ Watch a video demonstration of the analog clock in action:
 
 ## Demo
 
-Check out the live demo of the [Stopwatch App](https://anas7k.github.io/Js-Projects/Stopwatch/).
+Check out the live demo of the [Stopwatch](https://anas7k.github.io/Js-Projects/Stopwatch/).
 
 ## License
 
