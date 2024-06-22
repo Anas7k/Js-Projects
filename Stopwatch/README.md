@@ -31,7 +31,7 @@ This project is a web-based stopwatch that provides accurate time tracking along
 
 Watch a video demonstration of the analog clock in action:
 
-
+[!Stopwatch Video](https://github.com/Anas7k/Js-Projects/assets/117765449/dffc344a-7eb9-48c8-af8c-fb7ce099537e)
 
 ## Demo
 
