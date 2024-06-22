@@ -37,4 +37,3 @@ Check out the live demo of the [Temperature App](https://anas7k.github.io/Js-Pro
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](../LICENSE.md) file for details.
-[Temperature App](https://anas7k.github.io/Js-Projects/Temperature%20App/)  
