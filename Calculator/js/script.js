@@ -26,11 +26,13 @@ function handleOperator(value) {
         case '*':
         case '+':
         case '-':
-            let currentText = answer.textContent.trim();
-            if (currentText.endsWith('/') || currentText.endsWith('*') || currentText.endsWith('+') || currentText.endsWith('-')) {
-                answer.textContent = currentText.slice(0, -1) + value;
-            } else {
-                answer.textContent += value;
+            if (answer.textContent !== '0') {
+                let currentText = answer.textContent.trim();
+                if (currentText.endsWith('/') || currentText.endsWith('*') || currentText.endsWith('+') || currentText.endsWith('-')) {
+                    answer.textContent = currentText.slice(0, -1) + value;
+                } else {
+                    answer.textContent += value;
+                }
             }
             break;
         case '=':
@@ -46,11 +48,6 @@ function handleOperator(value) {
                 answer.textContent = parseFloat(answer.textContent) * -1;
             } else if (answer.textContent === '0') {
                 answer.textContent = '-' + answer.textContent;
-            }
-            break;
-        case '.':
-            if (answer.textContent === '•') {
-                answer.textContent = '0.'
             }
             break;
         default:
