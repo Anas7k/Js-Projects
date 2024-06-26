@@ -4,15 +4,15 @@
     box-sizing: border-box;
 }
 html, body {
-/*     height: 100%;
-    overflow: hidden; */
+    height: 100dvh;
+    overflow: hidden;
 }
 body {
     background-color: #c6c6c6;;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70%;
+/*     height: 70%; */
     width: 100%;
 /*     overflow: hidden; */
     font-family:  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
