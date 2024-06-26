@@ -8,7 +8,7 @@ html, body {
     overflow: hidden;
 }
 body {
-    background-color: #c6c6c6;
+    background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,7 +78,9 @@ button[value="."] {
     background-color: rgb(177, 53, 53);
     font-size: 25px;
 }
-
+@media screen and (min-wdith: 500px) {
+    background-color: #c6c6c6;
+}
 @media screen and (min-width: 700px) {
     .container {
         height: 700px;
