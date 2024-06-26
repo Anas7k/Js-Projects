@@ -5,13 +5,13 @@
 }
 
 body {
-    background-color: #cbcbcb;
+    background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+/*     overflow: hidden; */
     font-family:  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
