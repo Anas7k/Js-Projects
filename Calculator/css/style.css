@@ -44,7 +44,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     column-gap: 10px;
-    row-gap: 7px;
+    row-gap: 10px;
     /* padding: ; */
     padding-bottom: 10px;
 }
