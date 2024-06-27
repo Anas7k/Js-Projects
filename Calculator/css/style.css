@@ -51,7 +51,7 @@ body {
 
 .calculator button {
     width: 95%;
-    height: 95%;
+    height: 100%;
     font-size: 33px;
     border-radius: 50%;
     font-weight: 500;
@@ -76,7 +76,7 @@ button[value="."] {
 }
 .calculator button:nth-child(4n+4), 
 .calculator button:last-child {
-    background-color: rgb(177, 53, 53);
+    background-color: rgb(19, 126, 105);;
     font-size: 25px;
 }
 
