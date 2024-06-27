@@ -43,7 +43,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-    column-gap: 15px;
+    column-gap: 20px;
     row-gap: 10px;
     /* padding: ; */
     padding-bottom: 10px;
