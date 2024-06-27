@@ -80,7 +80,9 @@ button[value="."] {
     font-size: 25px;
 }
 @media screen and (min-wdith: 500px) {
-    background-color: #c6c6c6;
+    body {
+        background-color: #c6c6c6;
+    }
 }
 @media screen and (min-width: 700px) {
     .container {
