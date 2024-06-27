@@ -43,8 +43,8 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-    column-gap: 10px;
-    row-gap: 10px;
+    column-gap: 15px;
+    row-gap: 15px;
     /* padding: ; */
     padding-bottom: 10px;
 }
