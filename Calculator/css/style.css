@@ -79,12 +79,11 @@ button[value="."] {
     background-color: rgb(177, 53, 53);
     font-size: 25px;
 }
-@media screen and (min-wdith: 500px) {
+
+@media screen and (min-width: 700px) {
     body {
         background-color: #c6c6c6;
     }
-}
-@media screen and (min-width: 700px) {
     .container {
         height: 700px;
         border-radius: 10px;
