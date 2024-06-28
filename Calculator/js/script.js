@@ -1,56 +1,77 @@
 const answer = document.getElementById('answer');
 const buttons = document.querySelectorAll('.calculator button');
+let lastOperationWasEqual = false;
+let currentOperation = '';
+let currentNumber = '';
+let operatorTapped = false;
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         const buttonValue = button.value;
 
         if (button.classList.contains('operator')) {
-            handleOperator(buttonValue);
+            handleOperator(button);
         } else {
             handleNumber(buttonValue);
         }
         adjustFontSize(); // Call adjustFontSize after updating the answer
-        limitCharacters()
+        limitCharacters();
     });
 });
 
-function handleOperator(value) {
+function handleOperator(button) {
+    const value = button.value;
+    lastOperationWasEqual = false; // Reset flag for operators
+
+    // Change button color on click
+    buttons.forEach(btn => btn.classList.remove('active-operator'));
+    button.classList.add('active-operator');
+    operatorTapped = true; // Flag to indicate an operator was tapped
+
     switch (value) {
         case 'C':
             answer.textContent = '0';
+            currentOperation = '';
+            currentNumber = '';
+            operatorTapped = false;
             break;
         case '%':
-            // Convert the current number to percentage
-            answer.textContent = parseFloat(answer.textContent) / 100;
+            if (answer.textContent !== '0' && !isNaN(answer.textContent.replace(/,/g, ''))) {
+                answer.textContent = (parseFloat(answer.textContent.replace(/,/g, '')) / 100).toLocaleString('en-US');
+            }
+            operatorTapped = false;
             break;
         case '/':
         case '*':
         case '+':
         case '-':
-            if (answer.textContent !== '0') {
-                let currentText = answer.textContent.trim();
-                if (currentText.endsWith('/') || currentText.endsWith('*') || currentText.endsWith('+') || currentText.endsWith('-')) {
-                    answer.textContent = currentText.slice(0, -1) + value;
-                } else {
-                    answer.textContent += value;
-                }
+            if (answer.textContent !== '0' && !isNaN(answer.textContent.replace(/,/g, ''))) {
+                currentOperation = value;
+                currentNumber = answer.textContent.replace(/,/g, ''); // Remove commas for calculation
+                operatorTapped = true;
             }
             break;
         case '=':
-            try {
-                answer.textContent = formatResult(eval(answer.textContent));
-            } catch (error) {
-                answer.textContent = 'Error';
+            if (currentOperation && currentNumber) {
+                try {
+                    const result = eval(`${currentNumber} ${currentOperation} ${parseFloat(answer.textContent.replace(/,/g, ''))}`);
+                    answer.textContent = formatResult(result);
+                } catch (error) {
+                    answer.textContent = 'Error';
+                }
+                lastOperationWasEqual = true; // Set flag when '=' is pressed
+                currentOperation = '';
+                currentNumber = '';
+                operatorTapped = false;
             }
             break;
         case '+/-':
-            // Toggle between positive and negative
             if (answer.textContent !== 'Error' && answer.textContent !== '0') {
-                answer.textContent = parseFloat(answer.textContent) * -1;
+                answer.textContent = (parseFloat(answer.textContent.replace(/,/g, '')) * -1).toLocaleString('en-US');
             } else if (answer.textContent === '0') {
                 answer.textContent = '-' + answer.textContent;
             }
+            operatorTapped = false;
             break;
         default:
             break;
@@ -58,22 +79,49 @@ function handleOperator(value) {
 }
 
 function handleNumber(value) {
-    if (answer.textContent === '0' || answer.textContent === 'Error') {
-        answer.textContent = value;
-    } else if (answer.textContent.startsWith('-0')) {
-        answer.textContent = '-' + value;
-    } else if (answer.textContent === '.') {
-        answer.textContent = '0.' + value;
+    // Remove commas and add current value
+    let currentAnswer = answer.textContent.replace(/,/g, '');
+
+    if (lastOperationWasEqual) {
+        if (value === '.') {
+            answer.textContent = '0.';
+        } else {
+            answer.textContent = addCommas(value);
+        }
+        lastOperationWasEqual = false; // Reset the flag
+    } else if (operatorTapped) {
+        if (value === '.') {
+            answer.textContent = '0.'; // Start a new decimal number
+        } else {
+            answer.textContent = addCommas(value); // Clear the display for new number
+        }
+        operatorTapped = false; // Reset the flag
     } else {
-        answer.textContent += value;
+        if (value === '.') {
+            if (!currentAnswer.includes('.')) {
+                answer.textContent += value;
+            } else if (currentAnswer === '0' || currentAnswer === 'Error') {
+                answer.textContent = '0.';
+            }
+        } else if (currentAnswer === '0' || currentAnswer === 'Error') {
+            answer.textContent = addCommas(value);
+        } else if (currentAnswer.startsWith('-0')) {
+            answer.textContent = '-' + addCommas(value);
+        } else {
+            answer.textContent = addCommas(currentAnswer + value);
+        }
     }
 }
 
 function formatResult(result) {
-    if (result.toString().length > 7) {
-        return result.toPrecision(7);
+    if (isNaN(result)) {
+        return 'Error';
     }
-    return result;
+    return parseFloat(result).toLocaleString('en-US');
+}
+
+function addCommas(value) {
+    return parseFloat(value).toLocaleString('en-US');
 }
 
 function adjustFontSize() {
@@ -82,12 +130,12 @@ function adjustFontSize() {
     } else if (answer.textContent.length > 7) {
         answer.style.fontSize = '50px';
     } else {
-        answer.style.fontSize = '65px'; // Reset to default size or your preferred default size
+        answer.style.fontSize = '65px'; 
     }
 }
 
 function limitCharacters() {
-    const maxLength = 60;
+    const maxLength = 9;
 
     if (answer.textContent.length > maxLength) {
         answer.textContent = answer.textContent.slice(0, maxLength);
