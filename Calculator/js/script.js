@@ -10,6 +10,8 @@ buttons.forEach(button => {
         } else {
             handleNumber(buttonValue);
         }
+        adjustFontSize(); // Call adjustFontSize after updating the answer
+        limitCharacters()
     });
 });
 
@@ -42,7 +44,7 @@ function handleOperator(value) {
                 answer.textContent = 'Error';
             }
             break;
-            case '+/-':
+        case '+/-':
             // Toggle between positive and negative
             if (answer.textContent !== 'Error' && answer.textContent !== '0') {
                 answer.textContent = parseFloat(answer.textContent) * -1;
@@ -53,18 +55,17 @@ function handleOperator(value) {
         default:
             break;
     }
-
 }
 
 function handleNumber(value) {
     if (answer.textContent === '0' || answer.textContent === 'Error') {
         answer.textContent = value;
     } else if (answer.textContent.startsWith('-0')) {
-            answer.textContent = '-' + value;
-    } else if (answer.textContent === '.'){
-            answer.textContent = '0.' + value
+        answer.textContent = '-' + value;
+    } else if (answer.textContent === '.') {
+        answer.textContent = '0.' + value;
     } else {
-            answer.textContent += value;
+        answer.textContent += value;
     }
 }
 
@@ -73,4 +74,22 @@ function formatResult(result) {
         return result.toPrecision(7);
     }
     return result;
+}
+
+function adjustFontSize() {
+    if (answer.textContent.length > 9) {
+        answer.style.fontSize = '40px';
+    } else if (answer.textContent.length > 7) {
+        answer.style.fontSize = '50px';
+    } else {
+        answer.style.fontSize = '65px'; // Reset to default size or your preferred default size
+    }
+}
+
+function limitCharacters() {
+    const maxLength = 60;
+
+    if (answer.textContent.length > maxLength) {
+        answer.textContent = answer.textContent.slice(0, maxLength);
+    }
 }
