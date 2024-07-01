@@ -49,8 +49,8 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-    column-gap: 0px;
-    row-gap: 0px;
+    column-gap: 1\px;
+    row-gap: 1px;
     /* padding: ; */
     padding-bottom: 10px;
 }
@@ -69,6 +69,8 @@ body {
 button[value="0"] {
     grid-column: span 2;
     border-radius: 50px;
+    text-align: left;
+    padding-left: 30px;
 }
 button[value="."] {
     font-size: 20px;
@@ -82,7 +84,7 @@ button[value="."] {
 }
 .calculator button:nth-child(4n+4), 
 .calculator button:last-child {
-    background-color: rgb(19, 126, 105);;
+    background-color: rgb(19, 126, 105);
     font-size: 30px;
 }
 .calculator button:nth-child(4n+4).active-operator {
@@ -90,12 +92,13 @@ button[value="."] {
     color: rgb(19, 126, 105);
 }
 
+
 @media screen and (min-width: 700px) {
     body {
-        background-color: #c6c6c6;
+        background-color: #ffffff;
     }
     .container {
-        height: 700px;
+        height: 750px;
         border-radius: 10px;
     }
 }
