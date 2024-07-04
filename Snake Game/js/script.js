@@ -7,6 +7,7 @@ const gameControls = document.querySelectorAll(".game-controls i");
 // Game state variables
 let gameOver = false;
 let foodX, foodY;
+let gridSize;
 let snakeX = Math.floor(Math.random() * 10) + 11;
 let snakeY = Math.floor(Math.random() * 10) + 11;
 let velocityX = 0, velocityY = 0;
@@ -19,10 +20,24 @@ const minimumIntervalDuration = 70;
 let highScore = localStorage.getItem("high-score") || 0;
 highestScore.innerText = `High Score: ${highScore}`;
 
+// Adjust grid size based on screen width
+const adjustGridSize = () => {
+    if (window.innerWidth <= 600) {
+        gridSize = 20;
+    } else {
+        gridSize = 30;
+    }
+    gameBoard.style.gridTemplate = `repeat(${gridSize}, 1fr) / repeat(${gridSize}, 1fr)`;
+}
+
+// Call adjustGridSize on page load and on window resize
+adjustGridSize();
+window.addEventListener('resize', adjustGridSize);
+
 // Update food position randomly within grid
 const updateFoodPosition = () => {
-    foodX = Math.floor(Math.random() * 30) + 1;
-    foodY = Math.floor(Math.random() * 30) + 1;
+    foodX = Math.floor(Math.random() * gridSize) + 1;
+    foodY = Math.floor(Math.random() * gridSize) + 1;
 }
 
 // Handle game over condition
@@ -87,10 +102,9 @@ const initGame = () => {
     snakeBody[0] = [snakeX, snakeY];
 
     // Check collision with game boundaries
-    if(snakeX <= 0 || snakeX > 30 || snakeY <= 0 || snakeY > 30) {
+    if(snakeX <= 0 || snakeX > gridSize || snakeY <= 0 || snakeY > gridSize) {
         return gameOver = true;
     }
-
     // Render snake and food on game board
     for (let i = 0; i < snakeBody.length; i++) {
         html += `<div class="head" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
