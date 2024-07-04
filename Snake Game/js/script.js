@@ -8,15 +8,15 @@ const gameControls = document.querySelectorAll(".game-controls i");
 let gameOver = false;
 let foodX, foodY;
 let gridSize;
-let snakeX = Math.floor(Math.random() * 10) + 11;
-let snakeY = Math.floor(Math.random() * 10) + 11;
+let snakeX = Math.floor(Math.random() * 9) + 8;
+let snakeY = Math.floor(Math.random() * 9) + 8;
 let velocityX = 0, velocityY = 0;
 let snakeBody = [];
 let score = 0;
 let intervalDuration = 100;
 const minimumIntervalDuration = 70;
 
-// Getting high score from the local storage
+// Getting high score from local storage
 let highScore = localStorage.getItem("high-score") || 0;
 highestScore.innerText = `High Score: ${highScore}`;
 
@@ -43,22 +43,22 @@ const updateFoodPosition = () => {
 // Handle game over condition
 const handleGameOver = () => {
     clearInterval(setIntervalId);
-    alert("Game Over! press Ok to replay");
+    alert("Game Over! Press OK to replay.");
     location.reload();
 }
 
 // Change snake direction based on key press or control click
 const changeDirection = e => {
-    if(e.key === "ArrowUp" && velocityY != 1) {
+    if(e.key === "ArrowUp" && velocityY !== 1) {
         velocityX = 0;
         velocityY = -1;
-    } else if(e.key === "ArrowDown" && velocityY != -1) {
+    } else if(e.key === "ArrowDown" && velocityY !== -1) {
         velocityX = 0;
         velocityY = 1;
-    } else if(e.key === "ArrowLeft" && velocityX != 1) {
+    } else if(e.key === "ArrowLeft" && velocityX !== 1) {
         velocityX = -1;
         velocityY = 0;
-    } else if(e.key === "ArrowRight" && velocityX != -1) {
+    } else if(e.key === "ArrowRight" && velocityX !== -1) {
         velocityX = 1;
         velocityY = 0;
     }
@@ -70,6 +70,7 @@ gameControls.forEach(button => button.addEventListener("click", () => changeDire
 // Initialize game loop
 const initGame = () => {
     if(gameOver) return handleGameOver();
+
     let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
 
     // Check if snake eats food and update game state
@@ -81,7 +82,7 @@ const initGame = () => {
         localStorage.setItem("high-score", highScore);
         currentScore.innerText = `Score: ${score}`;
         highestScore.innerText = `High Score: ${highScore}`;
-        
+
         // Increase game speed
         intervalDuration -= 10;
         if (intervalDuration < minimumIntervalDuration) {
@@ -90,11 +91,11 @@ const initGame = () => {
         clearInterval(setIntervalId);
         setIntervalId = setInterval(initGame, intervalDuration);
     }
-    
+
     // Update snake position based on velocity
     snakeX += velocityX;
     snakeY += velocityY;
-    
+
     // Move snake body segments
     for (let i = snakeBody.length - 1; i > 0; i--) {
         snakeBody[i] = snakeBody[i - 1];
@@ -105,6 +106,7 @@ const initGame = () => {
     if(snakeX <= 0 || snakeX > gridSize || snakeY <= 0 || snakeY > gridSize) {
         return gameOver = true;
     }
+
     // Render snake and food on game board
     for (let i = 0; i < snakeBody.length; i++) {
         html += `<div class="head" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
@@ -113,7 +115,7 @@ const initGame = () => {
             gameOver = true;
         }
     }
-    gameBoard.innerHTML = html; // Update game board with new elements
+    gameBoard.innerHTML = html;
 }
 
 updateFoodPosition(); // Place initial food
