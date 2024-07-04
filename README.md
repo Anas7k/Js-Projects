@@ -5,4 +5,4 @@
 [Digital Clock](https://anas7k.github.io/Js-Projects/Digital%20Clock/)  
 [Stopwatch](https://anas7k.github.io/Js-Projects/Stopwatch/)  
 [Calculator](https://anas7k.github.io/Js-Projects/Calculator/)  
-[Snake Game](https://anas7k.github.io/Js-Projects/Snake%20Game%20in%20JavaScript/)  
+[Snake Game](https://anas7k.github.io/Js-Projects/Snake%20Game/)  
