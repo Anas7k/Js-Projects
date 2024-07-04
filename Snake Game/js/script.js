@@ -23,7 +23,7 @@ highestScore.innerText = `High Score: ${highScore}`;
 // Adjust grid size based on screen width
 const adjustGridSize = () => {
     if (window.innerWidth <= 600) {
-        gridSize = 20;
+        gridSize = 25;
     } else {
         gridSize = 30;
     }
@@ -43,7 +43,7 @@ const updateFoodPosition = () => {
 // Handle game over condition
 const handleGameOver = () => {
     clearInterval(setIntervalId);
-    alert("Game Over!");
+    alert("Game Over! press Ok to replay");
     location.reload();
 }
 
