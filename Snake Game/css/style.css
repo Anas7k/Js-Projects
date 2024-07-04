@@ -49,7 +49,7 @@ body {
   width: 100%;
   display: grid;
   background: #202428;
-  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  /* grid-template: repeat(30, 1fr) / repeat(30, 1fr); */
 }
 
 /* Food cell styles */
