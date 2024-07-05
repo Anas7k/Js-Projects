@@ -8,7 +8,7 @@ The Snake Game project is a classic implementation of the well-known Snake Game,
 
 ## Features
 
-- **Classic Gameplay:** Control a snake that moves across a grid. The snake grows longer each time it eats food and the game ends when the snake collides with the walls or itself. less grid for small sreens.
+- **Classic Gameplay:** Control a snake that moves across a grid. The snake grows longer each time it eats food and the game ends when the snake collides with the walls or itself. and less grid for small sreens.
   
 - **Responsive Design:** The game is designed to adapt to different screen sizes, ensuring a consistent and enjoyable experience on both desktop and mobile devices. for small screens it has well designed directions
   
@@ -34,3 +34,23 @@ The Snake Game project is a classic implementation of the well-known Snake Game,
   
 3. **Game Over:** The game ends when the snake collides with the walls or itself. Your highest score achieved during gameplay is recorded and displayed.
 
+
+## Video
+
+Watch a gameplay video of the Snake Game in action:
+
+[![Snake Game Video](https://github.com/Anas7k/Js-Projects/raw/main/assets/117765449/73c32d79-e041-467c-886d-fa45b65b8bb4)](https://github.com/Anas7k/Js-Projects/raw/main/assets/117765449/73c32d79-e041-467c-886d-fa45b65b8bb4)
+
+## Screenshot
+
+Here is a screenshot of the Snake Game for the Small Screens:
+
+<img src="https://github.com/Anas7k/Js-Projects/assets/117765449/46960fd0-c35b-4bf3-9a9a-fad90fa57fdf" width="200" height="400" alt="Snake Game Screenshot">
+
+## Demo
+
+Check out the live demo of the [Snake Game](https://anas7k.github.io/Js-Projects/Snake%20Game/).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](../LICENSE.md) file for details.
