@@ -111,13 +111,19 @@ function handleNumber(value) {
             answer.textContent = addCommas(currentAnswer + value);
         }
     }
+
+    clearActiveOperator(); // Clear active operator when a number is tapped
+}
+
+function clearActiveOperator() {
+    buttons.forEach(btn => btn.classList.remove('active-operator'));
 }
 
 function formatResult(result) {
     if (isNaN(result)) {
         return 'Error';
     }
-    return parseFloat(result).toLocaleString('en-US');
+    return parseFloat(result);
 }
 
 function addCommas(value) {
@@ -125,10 +131,10 @@ function addCommas(value) {
 }
 
 function adjustFontSize() {
-    if (answer.textContent.length > 9) {
-        answer.style.fontSize = '40px';
-    } else if (answer.textContent.length > 7) {
-        answer.style.fontSize = '50px';
+    // Remove commas for length check
+    const lengthWithoutCommas = answer.textContent.replace(/,/g, '').replace('-', '').length;
+    if (lengthWithoutCommas > 9) {
+        answer.style.fontSize = '60px';
     } else {
         answer.style.fontSize = '65px'; 
     }
@@ -137,7 +143,10 @@ function adjustFontSize() {
 function limitCharacters() {
     const maxLength = 9;
 
-    if (answer.textContent.length > maxLength) {
-        answer.textContent = answer.textContent.slice(0, maxLength);
+    // Remove commas for length check
+    let currentAnswer = answer.textContent.replace(/,/g, '');
+    if (currentAnswer.replace('-', '').length > maxLength) {
+        currentAnswer = currentAnswer.slice(0, maxLength);
+        answer.textContent = addCommas(currentAnswer);
     }
 }
