@@ -56,6 +56,9 @@ body {
     font-size: 30px;
     cursor: pointer;
 }
+#back:active {
+   color: lightgray;
+}
 .calculator {
     width: 100%;
     height: 68%;
@@ -75,6 +78,7 @@ body {
     cursor: pointer;
     border: none;
     color: #fff;
+    transition: background-color 0.2s ease-in-out
 }
 button[value="0"] {
     grid-column: span 2;
@@ -85,18 +89,33 @@ button[value="0"] {
 button[value="."] {
     font-size: 20px;
 }
+
 .calculator button:nth-child(-n+3) {
     background-color: rgb(165, 165, 165);
     color: black;
 }
-.calculator button:nth-child(n+5){
+.calculator button:nth-child(-n+3):active {
+    background-color: rgb(211, 211, 211);
+    transition: .5s ease;
+}
+
+.calculator button:nth-child(n+5) {
     background-color: rgb(51, 51, 51);
 }
+.calculator button:nth-child(n+5):active {
+    background-color: rgb(102, 102, 102)
+}
+
 .calculator button:nth-child(4n+4), 
 .calculator button:last-child {
     background-color: rgb(19, 126, 105);
     font-size: 30px;
 }
+.calculator button:nth-child(4n+4):active, 
+.calculator button:last-child:active {
+    background-color: rgb(29, 176, 145);
+}
+
 .calculator button:nth-child(4n+4).active-operator {
     background-color: #fff;
     color: rgb(19, 126, 105);
