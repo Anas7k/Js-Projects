@@ -55,6 +55,7 @@ body {
     border: none;
     font-size: 30px;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 #back:active {
    color: lightgray;
@@ -78,7 +79,7 @@ body {
     cursor: pointer;
     border: none;
     color: #fff;
-    transition: background-color 0.2s ease-in-out
+    transition: 0.2s ease-in-out;
 }
 button[value="0"] {
     grid-column: span 2;
