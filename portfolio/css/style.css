@@ -27,9 +27,9 @@ a {
     top: 0;
     transition: all 1s;
     z-index: 1000;
-    /* background-color: #09263a; */
-    background-color: hsla(206, 83%, 23%, 0.178);
-    /* -webkit-backdrop-filter: blur(15px) !important;
+    background-color: #09263a;
+    /* background-color: hsla(206, 83%, 23%, 0.178);
+    -webkit-backdrop-filter: blur(15px) !important;
     backdrop-filter: blur(15px) !important; */
 }
 
@@ -40,18 +40,7 @@ a {
     font-weight: 600;
     padding-left: 5%;
 }
-.navbar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    backdrop-filter: blur(10px); /* Same blur as navbar */
-    -webkit-backdrop-filter: blur(15px) !important;
-    /* background-color:  hsla(206, 83%, 23%, 0.178); Match the navbar background */
-}
+
 .navbar ul {
     display: flex;
     align-items: center;
@@ -60,10 +49,9 @@ a {
     height: 230px;
     justify-content: center;
     list-style: none;
-    background-color: hsla(206, 83%, 23%, 0.178);
-    /* background-color: hsla(206, 69%, 10%, 0.172) !important;
+    background-color: hsla(206, 69%, 10%, 0.172) !important;
     -webkit-backdrop-filter: blur(15px) !important;
-    backdrop-filter: blur(15px) !important; */
+    backdrop-filter: blur(15px) !important;
     gap: 1rem;
     position: absolute;
     top: 70px;
@@ -73,18 +61,7 @@ a {
     transition: all 0.7s;
     
 }
-.navbar ul::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    backdrop-filter: blur(10px); /* Same blur as navbar */
-    -webkit-backdrop-filter: blur(15px) !important;
-    /* background-color: hsla(205, 69%, 23%, 0.178);  */
-}
+
 .navbar ul li a {
     text-decoration: none;
     justify-content: space-between;
@@ -691,7 +668,7 @@ z-index: 20;
         font-size: 28px;
     }
     .navbar {
-        /* background-color: transparent; */
+        background-color: transparent;
     }
     .navbar h2 {
         padding-left: 6%;
