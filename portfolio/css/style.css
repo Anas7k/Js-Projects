@@ -27,9 +27,10 @@ a {
     top: 0;
     transition: all 1s;
     z-index: 1000;
-    background-color: hsla(206, 83%, 23%, 0.178);
+    /* background-color: #09263a; */
+    /* background-color: hsla(206, 83%, 23%, 0.178);
     -webkit-backdrop-filter: blur(15px) !important;
-    backdrop-filter: blur(15px) !important;
+    backdrop-filter: blur(15px) !important; */
 }
 
 .navbar h2 {
@@ -39,16 +40,28 @@ a {
     font-weight: 600;
     padding-left: 5%;
 }
-
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    backdrop-filter: blur(10px); /* Same blur as navbar */
+    background-color: rgba(8, 27, 41, 0.3); /* Match the navbar background */
+}
 .navbar ul {
     display: flex;
     align-items: center;
     overflow: hidden;
     flex-direction: column;
+    height: 230px;
+    justify-content: center;
     list-style: none;
-    background-color: hsla(206, 69%, 10%, 0.172) !important;
+    /* background-color: hsla(206, 69%, 10%, 0.172) !important;
     -webkit-backdrop-filter: blur(15px) !important;
-    backdrop-filter: blur(15px) !important;
+    backdrop-filter: blur(15px) !important; */
     gap: 1rem;
     position: absolute;
     top: 70px;
@@ -56,13 +69,24 @@ a {
     right: 0;
     text-align: center;
     transition: all 0.7s;
+    
 }
-
+.navbar ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    backdrop-filter: blur(10px); /* Same blur as navbar */
+    background-color: rgba(8, 27, 41, 0.3); /* Match the navbar background */
+}
 .navbar ul li a {
     text-decoration: none;
     justify-content: space-between;
     color: #fff;
-    font-size: 1em;
+    font-size: 1.1rem;
     margin-left: 25px;
     transition: color 0.3s ease;
     /* display: none; */
@@ -379,7 +403,7 @@ header img {
 
 .services {
     margin: 0 auto;
-    width: 90%;
+    width: 92%;
     /* max-width: 1000px; */
     display: grid;
     grid-template-columns: 1fr;
@@ -547,7 +571,7 @@ z-index: 20;
     border-radius: 10px;
     border: none;
     line-height: 0;
-
+    width: 96%;
 }
 .project img{
     width: 100%;
@@ -623,7 +647,6 @@ z-index: 20;
         width: 200px;
         height: 200px;
     }
-    
 }
 @media screen and (min-width: 650px) {
     .my-skills {
@@ -649,7 +672,9 @@ z-index: 20;
     }
     .services {
         width: 80%;
+        max-width: 540px;
     }
+    
 }
 @media screen and (min-width: 768px) {
     .about {
@@ -662,7 +687,9 @@ z-index: 20;
     .middle h2 {
         font-size: 28px;
     }
-
+    .navbar {
+        /* background-color: transparent; */
+    }
     .navbar h2 {
         padding-left: 6%;
     }
@@ -698,6 +725,7 @@ z-index: 20;
     }
     .services {
         width: 90%;
+        max-width: none;
         grid-template-columns: repeat(2, 1fr);
     }
     .both {
