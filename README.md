@@ -6,3 +6,4 @@
 [Stopwatch](https://anas7k.github.io/Js-Projects/Stopwatch/)  
 [Calculator App](https://anas7k.github.io/Js-Projects/Calculator/)  
 [Snake Game](https://anas7k.github.io/Js-Projects/Snake%20Game/)  
+[Portfolio](https://anas7k.github.io/Js-Projects/portfolio/)  
