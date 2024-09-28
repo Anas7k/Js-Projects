@@ -28,8 +28,8 @@ a {
     transition: all 1s;
     z-index: 1000;
     /* background-color: #09263a; */
-    /* background-color: hsla(206, 83%, 23%, 0.178);
-    -webkit-backdrop-filter: blur(15px) !important;
+    background-color: hsla(206, 83%, 23%, 0.178);
+    /* -webkit-backdrop-filter: blur(15px) !important;
     backdrop-filter: blur(15px) !important; */
 }
 
@@ -49,7 +49,8 @@ a {
     bottom: 0;
     z-index: -1;
     backdrop-filter: blur(10px); /* Same blur as navbar */
-    background-color: rgba(8, 27, 41, 0.3); /* Match the navbar background */
+    -webkit-backdrop-filter: blur(15px) !important;
+    /* background-color:  hsla(206, 83%, 23%, 0.178); Match the navbar background */
 }
 .navbar ul {
     display: flex;
@@ -59,6 +60,7 @@ a {
     height: 230px;
     justify-content: center;
     list-style: none;
+    background-color: hsla(206, 83%, 23%, 0.178);
     /* background-color: hsla(206, 69%, 10%, 0.172) !important;
     -webkit-backdrop-filter: blur(15px) !important;
     backdrop-filter: blur(15px) !important; */
@@ -80,7 +82,8 @@ a {
     bottom: 0;
     z-index: -1;
     backdrop-filter: blur(10px); /* Same blur as navbar */
-    background-color: rgba(8, 27, 41, 0.3); /* Match the navbar background */
+    -webkit-backdrop-filter: blur(15px) !important;
+    /* background-color: hsla(205, 69%, 23%, 0.178);  */
 }
 .navbar ul li a {
     text-decoration: none;
