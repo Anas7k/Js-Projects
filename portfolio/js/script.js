@@ -1,3 +1,4 @@
+const header = document.querySelector('.navbar')
 let menu = document.querySelector('.menu');
 let navbar = document.querySelector('.navbar ul');
 
@@ -12,3 +13,11 @@ menu.addEventListener('click', () => {
         navbar.style.maxHeight = "0px";
     }
 });
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('navbar-scrolled')
+    }else if (window.scrollY <= 50) {
+        header.classList.remove('navbar-scrolled')
+    }
+})
