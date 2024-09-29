@@ -28,9 +28,9 @@ a {
     transition: all 1s;
     z-index: 1000;
     background-color: #09263a;
-    background-color: hsla(206, 83%, 23%, 0.178);
+/*     background-color: hsla(206, 83%, 23%, 0.178);
     -webkit-backdrop-filter: blur(15px) !important;
-    backdrop-filter: blur(15px) !important;
+    backdrop-filter: blur(15px) !important; */
 }
 
 .navbar h2 {
