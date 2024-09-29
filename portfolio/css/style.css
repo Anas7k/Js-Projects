@@ -59,7 +59,7 @@ a {
     right: 0;
     text-align: center;
     transition: all 0.7s;
-    
+    z-index: 999;
 }
 
 .navbar ul li a {
