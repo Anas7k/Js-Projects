@@ -95,41 +95,41 @@ header img {
     translate: 40px;
     z-index: -1;
 }
-.both {
-    margin: 0 auto;
-    margin-top: 100px;
+.home-container {
+    margin: 100px auto;
+    margin-top: 200px;
     width: 90%;
     display: grid;
     grid-template-columns: 1fr;
 }
 
-.middle {
-    /* margin: 0 auto;
-    margin-top: 100px;
-    width: 90%; */
-}
-.left {
+
+.left-side {
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.middle h1 {
+.home-heading h1 {
     font-size: 32px;
     color: #fff;
     font-weight: 600;
     line-height: 1.2;
-}
 
-.middle h2 {
+}
+.home-heading h1 span {
+    position: relative;
+    bottom: 15px;
+}
+.home-heading h2 {
     font-size: 24px;
     color: #00abf0;
     font-weight: 600;
     margin-top: 40px;
 }
 
-.middle p {
+.home-heading p {
     margin-top: 30px;
     font-size: 1em;
     color: #fff;
@@ -393,14 +393,14 @@ header img {
     align-items: center;
 }
 
-.both .right   {
+.home-container .right-side {
     width: 90%;
     height: 70%;
     margin: 0 auto;
     margin-top: 50px;
     text-align: center;
 }
-.both .right img {
+.home-container .right-side img {
     /* margin: 0 auto; */
     width: 90%;
     /* height: 100%; */
@@ -699,6 +699,9 @@ z-index: 20;
     .menu-bar {
         display: none;
     }
+    .left-side {
+        text-align: left;
+    }
     .my-skills .skill-icon {
         width: 210px;
         height: 210px;
@@ -708,7 +711,7 @@ z-index: 20;
         max-width: none;
         grid-template-columns: repeat(2, 1fr);
     }
-    .both {
+    .home-container {
         grid-template-columns: 1fr 1fr;
         margin-top: 0;
     }
