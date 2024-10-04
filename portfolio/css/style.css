@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap');
 
 html {
-    /* width: 100%; */
+    max-width: 100%;
 }
 body {
-    /* max-width: fit-content; */
+    max-width: 100%;
     background: #081b29;
     font-family: poppins, sans-serif;
     height: 100vh;
