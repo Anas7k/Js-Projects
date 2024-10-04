@@ -97,7 +97,7 @@ header {
     position: relative; /* Change to relative if necessary */
 }
 
-header img {
+header img, header .left-bottom-img {
     width: 100%; 
     max-width: 300px; /* Limit width */
     position: absolute;
@@ -110,7 +110,15 @@ header .img-right-corner {
     right: 0;
     transform: translate(140px, -70px); 
 }
+/* header .left-bottom-img {
+    width: 00px;
+    height: 200px;
+    top: 600px;
+    left: -147px;
+} */
 header .img-left-bottom {
+    width: 100%;
+    clip-path: inset(30% 50% 0 0);
     top: 600px;
     left: -147px;
     transform: rotate(180deg)
