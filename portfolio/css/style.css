@@ -2,6 +2,7 @@
 
 html {
     max-width: 100%;
+    overflow-x: hidden;
 }
 body {
     max-width: 100%;
@@ -100,11 +101,19 @@ header img {
     width: 100%; 
     max-width: 300px; /* Limit width */
     position: absolute;
-    top: -200px;
-    right: 0;
-    translate: 43px;
-    
+    /* translate: 43px; */
+    /* transform: translate(140px, -70px);  */
     z-index: -1; /* Ensure it stays behind other elements */
+}
+header .img-right-corner {
+    top: 0;
+    right: 0;
+    transform: translate(140px, -70px); 
+}
+header .img-left-bottom {
+    top: 600px;
+    left: -147px;
+    transform: rotate(180deg)
 }
 .home-container {
     margin: 0 auto;
@@ -763,8 +772,8 @@ footer {
         margin-top: 150px;
         margin-bottom: 300px;
     }
-    .right img {
-
+    header .img-right-corner {
+        transform: translate(43px, 0px); 
     }
 }
 
