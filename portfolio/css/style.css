@@ -98,10 +98,9 @@ header img {
     top: 0;
     right: 0;
     translate: 40px;
-    z-index: -1000;
-    overflow: hidden;
-    object-fit: cover; /* Ensures the image retains its aspect ratio */
-    clip-path: inset(0 50px 0 0);
+    z-index: -1;
+    /* overflow: hidden; */
+    display: none;
 }
 .home-container {
     margin: 0 auto;
@@ -683,6 +682,9 @@ footer {
     
 }
 @media screen and (min-width: 768px) {
+    header img {
+        display: block;
+    }
     .about {
         grid-template-columns: 1fr 1fr;
         width: 90%;
@@ -765,7 +767,7 @@ footer {
 @media screen and (min-width: 1100px) {
     .about {
         gap: 5rem;
-        margin-top: ;
+        /* margin-top: ; */
     }
     
     main {
