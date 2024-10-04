@@ -92,15 +92,19 @@ a {
 .menu-bar:hover {
     cursor: pointer;
 }
+header {
+    position: relative; /* Change to relative if necessary */
+}
+
 header img {
-    width: 300px;
+    width: 100%; 
+    max-width: 300px; /* Limit width */
     position: absolute;
-    top: 0;
+    top: -200px;
     right: 0;
-    translate: 40px;
-    z-index: -1;
-    /* overflow: hidden; */
-    display: none;
+    translate: 43px;
+    
+    z-index: -1; /* Ensure it stays behind other elements */
 }
 .home-container {
     margin: 0 auto;
@@ -865,6 +869,22 @@ footer {
         height: 190px;
     }
 }
+
+@keyframes shine {
+    0% {
+        opacity: 0.2; /* Starting opacity */
+    }
+    50% {
+        opacity: 1; /* Full brightness */
+    }
+    100% {
+        opacity: 0.2; /* Return to starting opacity */
+    }
+  }
+  
+  .shining {
+    animation: shine 5s infinite;
+  }
 /* 
 
 @keyframes fromLeft {
