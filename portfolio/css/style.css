@@ -100,6 +100,8 @@ header img {
     translate: 40px;
     z-index: -1000;
     overflow: hidden;
+    object-fit: cover; /* Ensures the image retains its aspect ratio */
+    clip-path: inset(0 50px 0 0);
 }
 .home-container {
     margin: 0 auto;
