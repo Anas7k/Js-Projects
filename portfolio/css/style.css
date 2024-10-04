@@ -4,7 +4,7 @@ html {
     /* width: 100%; */
 }
 body {
-    max-width: fit-content;
+    /* max-width: fit-content; */
     background: #081b29;
     font-family: poppins, sans-serif;
     height: 100vh;
@@ -99,6 +99,7 @@ header img {
     right: 0;
     translate: 40px;
     z-index: -1000;
+    overflow: hidden;
 }
 .home-container {
     margin: 0 auto;
