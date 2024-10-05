@@ -2,7 +2,7 @@
 
 html {
     max-width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 body {
     max-width: 100%;
@@ -94,34 +94,28 @@ a {
     cursor: pointer;
 }
 header {
-    position: relative; /* Change to relative if necessary */
+    /* position: relative; */
+    /* z-index: 1000; */
 }
 
-header img, header .left-bottom-img {
+header img {
     width: 100%; 
-    max-width: 300px; /* Limit width */
+    max-width: 300px;
     position: absolute;
-    /* translate: 43px; */
-    /* transform: translate(140px, -70px);  */
-    z-index: -1; /* Ensure it stays behind other elements */
+    z-index: -1000;
 }
 header .img-right-corner {
     top: 0;
     right: 0;
     transform: translate(140px, -70px); 
 }
-/* header .left-bottom-img {
-    width: 00px;
-    height: 200px;
-    top: 600px;
-    left: -147px;
-} */
 header .img-left-bottom {
     width: 100%;
     clip-path: inset(30% 50% 0 0);
     top: 600px;
     left: -147px;
-    transform: rotate(180deg)
+    transform: rotate(180deg);
+    z-index: -1000;
 }
 .home-container {
     margin: 0 auto;
@@ -730,6 +724,7 @@ footer {
     }
     .navbar {
         background-color: transparent;
+        
     }
     .navbar h2 {
         padding-left: 6%;
