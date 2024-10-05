@@ -2,7 +2,8 @@
 
 html {
     max-width: 100%;
-    /* overflow-x: hidden; */
+    /* overflow-x: auto;
+    overflow-y: auto; */
 }
 body {
     max-width: 100%;
@@ -93,23 +94,23 @@ a {
 .menu-bar:hover {
     cursor: pointer;
 }
-header {
-    /* position: relative; */
-    /* z-index: 1000; */
+.decor-img {
+    position: relative;
+    z-index: -1000;
 }
 
-header img {
+.decor-img img {
     width: 100%; 
     max-width: 300px;
     position: absolute;
     z-index: -1000;
 }
-header .img-right-corner {
+.decor-img .img-right-corner {
     top: 0;
     right: 0;
     transform: translate(140px, -70px); 
 }
-header .img-left-bottom {
+.decor-img .img-left-bottom {
     width: 100%;
     clip-path: inset(30% 50% 0 0);
     top: 600px;
@@ -697,9 +698,7 @@ footer {
     
 }
 @media screen and (min-width: 768px) {
-    header img {
-        display: block;
-    }
+    
     .about {
         grid-template-columns: 1fr 1fr;
         width: 90%;
@@ -775,7 +774,7 @@ footer {
         margin-top: 150px;
         margin-bottom: 300px;
     }
-    header .img-right-corner {
+    .decor-img .img-right-corner {
         transform: translate(43px, 0px); 
     }
 }
